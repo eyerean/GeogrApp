@@ -1,0 +1,52 @@
+extends layout
+
+block content
+
+	h3 Lesson 2: Continents
+
+	p A continent is one of several very large landmasses on Earth. 
+		| They are generally identified by convention rather than any strict criteria, 
+		| with up to seven regions commonly regarded as continents. 
+		| These are (from largest in size to smallest):
+
+	ul#list
+		li Asia
+		li Africa
+		li North America
+		li South America
+		li Antarctika
+		li Europe
+		li Australia
+
+	img(class="image", src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Continental_models-Australia.gif/1280px-Continental_models-Australia.gif")
+
+	p <br/><br/> Another popular theory unites North America and South America into one continent, 
+		| whereas another theory claims that Asia and Europe consist one continent, named "Eurasia".
+
+	p In our tests and lessons, we will accept the first theory of the 7 continents.<br/><br/>
+
+	p In geology, continents are described by means of tectonic plates. 
+		| Plate tectonics is the process and study of the movement, collision and division of continents.<br/><br/>
+
+	p On the table below we list information about the population of each continent:<br/><br/>
+
+	table#pop_cont.table_style
+		thead
+			tr
+				th Continent&nbsp
+				th Total Population&nbsp
+				th Percent of total population&nbsp
+				th Most populous city&nbsp
+		tbody
+			- var items = [{ continent:'Asia', pop:'4,164,252,000', percent:'60%', city:'Shanghai, China'}, { continent:'Africa', pop:'1,022,234,000', percent:'15%', city:'Lagos, Nigeria'}, { continent:'North America', pop:'542,056,000', percent:'8%', city:'Mexico City, Mexico'}, { continent:'South America', pop:'392,555,000', percent:'6%', city:'Sao Paulo, Brazil'}, {continent:'Antarctika', pop:'4,490', percent:'0%', city:'-'}, { continent:'Europe', pop:'738,199,000', percent:'11%', city:'Moscow, Russia'},	{ continent:'Australia', pop:'29,127,000', percent:'0.4%', city:'Sydney, Australia'}]
+			- each item in items
+				tr
+					td= item.continent
+					td= item.pop
+					td= item.percent
+					td= item.city
+
+	p <br/><br/>The total land area of all continents is 148,647,000 square kilometres, 
+		| or 29.1% of earth's surface (510,065,600 km2).
+
+	p A rough estimate of the total population of all the continents is 7,000,000,000.<br/><br/><br/>

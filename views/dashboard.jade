@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+	h3 Dashboard
+	p= 'Hello ' + name + ' ' + lastname + '!'
+		| <br /><br /><br />
+	p Here are your stats about Geography, taken from your test results: <br /><br/>
+		| Success percentage for category <b>Capitals</b>: #{statistics['capitals']}<br />
+		| Success percentage for category <b>Countries</b>: #{statistics['countries']}<br />
+		| Success percentage for category <b>Continents</b>: #{statistics['continents']}<br />
+		| Success percentage for category <b>Mountains</b>: #{statistics['mountains']}<br />
+		| Success percentage for category <b>Rivers</b>: #{statistics['rivers']}<br /><br/>
+		| <b>General success percentage:</b> #{total_percentage}<br />
+
+
+
+
+

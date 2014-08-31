@@ -1,0 +1,18 @@
+extends layout
+
+block content
+
+	h3 Results
+
+	p You have answered correctly #{correct_answers} out of #{tests_done} questions done!
+
+	if needs_revision && category != 'revision'
+		p You need to study more about this subject.
+		if category == 'countries' || category == 'capitals'
+			a(href="/theory/countries-and-capitals") Read this theory here.
+		else
+			a(href="/theory/#{category}") Read this theory here.
+	else if needs_revision && category == 'revision'
+		p You need to study more!
+	else
+		p Well done!

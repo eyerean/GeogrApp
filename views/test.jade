@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+	h3 Test
+
+	.container(style="margin-top: 40px;")
+		form(method="POST")
+			- each test, key in tests
+				p= key+1 + ". " + test.text
+				- each answer in test.choices
+					label.choice_label= answer
+						input.choice_input(type="radio" name="#{test._id}" value="#{answer}")
+				br
+
+			input(type="submit" value="Submit")

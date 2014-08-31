@@ -1,0 +1,54 @@
+doctype html
+html
+	head
+		title GeogrApp - The best Application about Geography!
+		link(rel='stylesheet', href='/libs/css/bootstrap.min.css')
+		link(rel='stylesheet', href='/styles/styles.css', type="text/css")
+		script(type="text/javascript", src="/libs/javascript/jquery-2.1.1.min.js")
+
+
+
+	body
+		.container.dash_option
+			nav.navbar.navbar-default(role="navigation")
+				div.container-fluid.navigation_bar
+					div.navbar-header
+						button.navbar-toggle(type="button", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+							span.sr-only Toggle navigation
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						a.navbar-brand(href="/") <b>GeogrApp</b>
+					div#bs-example-navbar-collapse-1.collapse.navbar-collapse
+						ul.nav.navbar-nav
+							if( section == 'dashboard' )
+								li.active
+									a(href="/") Dashboard
+							else
+								li
+									a(href="/") Dashboard
+
+							if( section == 'theory' )
+								li.active
+									a(href="/theory") Theory
+							else
+								li
+									a(href="/theory") Theory
+									
+							if( section == 'tests' )
+								li.active
+									a(href="/tests") Tests
+							else
+								li
+									a(href="/tests") Tests
+							if( section == 'about' )
+								li.active
+									a(href="/about") About
+							else
+								li
+									a(href="/about") About
+						ul.nav.navbar-nav.navbar-right
+							li
+								a(href="/logout") Logout
+			block content
